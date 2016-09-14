@@ -1,0 +1,316 @@
+                    Chaco 2.0
+          Sandia National Laboratories
+
+Reading parameter modification file `User_Params'
+  Parameter `DEBUG_COARSEN' reset to 1
+  Parameter `DEBUG_TRACE' reset to 1
+
+<Entering input_queries>
+Graph input file: grid20x20.graph
+Global partitioning method:
+  (1) Multilevel-KL
+  (2) Spectral
+  (3) Inertial
+  (4) Linear
+  (5) Random
+  (6) Scattered
+  (7) Read-from-file
+1
+Number of vertices to coarsen down to: 50
+Total number of target hypercube dimensions: 5
+Partitioning dimension: 
+  (1) Bisection
+  (2) Quadrisection
+  (3) Octasection
+2
+<Entering input_graph>
+<Entering interface>
+<Entering submain>
+<Entering check_input>
+<Entering reflect_input>
+
+
+           Input and Parameter Values
+
+Graph file: `grid20x20.graph', # vertices = 400, # edges = 760
+Global method: Multilevel-KL
+Number of vertices to coarsen down to: 50
+Eigen tolerance: 0.001
+Local method: Kernighan-Lin
+Partitioning target: 5-dimensional hypercube
+Partitioning mode: Quadrisection
+Random seed: 7654321
+Active Parameters:
+  CHECK_INPUT = True
+  LANCZOS_TYPE:  Selective orthogonalization
+  EIGEN_TOLERANCE = 0.001
+  SRESTOL = -1 ... autoset to square of eigen tolerance
+  LANCZOS_MAXITNS = -1 ... autoset to twice # vertices
+  LANCZOS_SO_PRECISION = 2 ... double precision
+  LANCZOS_SO_INTERVAL = 10
+  LANCZOS_CONVERGENCE_MODE = 0 ... residual tolerance
+  BISECTION_SAFETY = 10
+  LANCZOS_TIME = 0 ... no detailed timing
+  WARNING_EVECS = 2
+  MAPPING_TYPE = 1 ... min-cost assignment
+  MAKE_CONNECTED = True
+  PERTURB = True
+    NPERTURB = 2
+    PERTURB_MAX = 0.003
+  COARSEN_RATIO_MIN = 0.7
+  COARSE_NLEVEL_KL = 2
+  MATCH_TYPE = 1
+  HEAVY_MATCH = False
+  COARSE_KL_BOTTOM = True
+  COARSEN_VWGTS = True
+  COARSEN_EWGTS = True
+  KL_ONLY_BNDY = True
+  KL_RANDOM = True
+  KL_METRIC = Hops
+  KL_NTRIES_BAD = 1
+  KL_BAD_MOVES = 20
+  KL_UNDO_LIST = True
+  KL_IMBALANCE = 0
+  TERM_PROP = False
+  OUTPUT_METRICS = 2
+  MAKE_VWGTS = False
+  REFINE_MAP = False
+  REFINE_PARTITION = 0
+  INTERNAL_VERTICES = False
+  DEBUG_COARSEN = 1
+  DEBUG_PARAMS = 2
+  DEBUG_TRACE = 1
+
+
+
+Starting to partition ...
+
+<Entering balance>
+<Entering divide, nvtxs = 400, nedges = 760>
+<Entering coarsen_kl, step=0, nvtxs=400, nedges=760, vmax=50>
+Number of matching edges = 199
+ Coarse graph has 201 vertices and 399 edges
+<Entering coarsen_kl, step=1, nvtxs=201, nedges=399, vmax=50>
+Number of matching edges = 100
+ Coarse graph has 101 vertices and 195 edges
+<Entering coarsen_kl, step=2, nvtxs=101, nedges=195, vmax=50>
+Number of matching edges = 49
+ Coarse graph has 52 vertices and 114 edges
+<Entering coarsen_kl, step=3, nvtxs=52, nedges=114, vmax=50>
+Number of matching edges = 25
+ Coarse graph has 27 vertices and 57 edges
+<Entering coarsen_kl, step=4, nvtxs=27, nedges=57, vmax=50>
+<Entering eigensolve, nvtxs = 27, nedges = 57>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 27, ndims = 2>
+<Entering klspiff, nvtxs = 27>
+ Leaving coarsen_kl, step=3
+<Entering klspiff, nvtxs = 101>
+ Leaving coarsen_kl, step=2
+ Leaving coarsen_kl, step=1
+<Entering klspiff, nvtxs = 400>
+ Leaving coarsen_kl, step=0
+<Entering divide, nvtxs = 100, nedges = 177>
+<Entering coarsen_kl, step=0, nvtxs=100, nedges=177, vmax=50>
+Number of matching edges = 49
+ Coarse graph has 51 vertices and 102 edges
+<Entering coarsen_kl, step=1, nvtxs=51, nedges=102, vmax=50>
+Number of matching edges = 24
+ Coarse graph has 27 vertices and 54 edges
+<Entering coarsen_kl, step=2, nvtxs=27, nedges=54, vmax=50>
+<Entering eigensolve, nvtxs = 27, nedges = 54>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 27, ndims = 2>
+<Entering klspiff, nvtxs = 27>
+ Leaving coarsen_kl, step=1
+<Entering klspiff, nvtxs = 100>
+ Leaving coarsen_kl, step=0
+<Entering divide, nvtxs = 100, nedges = 173>
+<Entering coarsen_kl, step=0, nvtxs=100, nedges=173, vmax=50>
+Number of matching edges = 50
+ Coarse graph has 50 vertices and 91 edges
+<Entering coarsen_kl, step=1, nvtxs=50, nedges=91, vmax=50>
+<Entering eigensolve, nvtxs = 50, nedges = 91>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 50, ndims = 2>
+<Entering klspiff, nvtxs = 50>
+<Entering klspiff, nvtxs = 100>
+ Leaving coarsen_kl, step=0
+<Entering divide, nvtxs = 100, nedges = 174>
+<Entering coarsen_kl, step=0, nvtxs=100, nedges=174, vmax=50>
+Number of matching edges = 49
+ Coarse graph has 51 vertices and 98 edges
+<Entering coarsen_kl, step=1, nvtxs=51, nedges=98, vmax=50>
+Number of matching edges = 23
+ Coarse graph has 28 vertices and 56 edges
+<Entering coarsen_kl, step=2, nvtxs=28, nedges=56, vmax=50>
+<Entering eigensolve, nvtxs = 28, nedges = 56>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 28, ndims = 2>
+<Entering klspiff, nvtxs = 28>
+ Leaving coarsen_kl, step=1
+<Entering klspiff, nvtxs = 100>
+ Leaving coarsen_kl, step=0
+<Entering divide, nvtxs = 100, nedges = 174>
+<Entering coarsen_kl, step=0, nvtxs=100, nedges=174, vmax=50>
+Number of matching edges = 49
+ Coarse graph has 51 vertices and 91 edges
+<Entering coarsen_kl, step=1, nvtxs=51, nedges=91, vmax=50>
+Number of matching edges = 24
+ Coarse graph has 27 vertices and 47 edges
+<Entering coarsen_kl, step=2, nvtxs=27, nedges=47, vmax=50>
+<Entering eigensolve, nvtxs = 27, nedges = 48>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 27, ndims = 2>
+<Entering klspiff, nvtxs = 27>
+ Leaving coarsen_kl, step=1
+<Entering klspiff, nvtxs = 100>
+ Leaving coarsen_kl, step=0
+<Entering divide, nvtxs = 25, nedges = 38>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=38, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 38>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 40>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=40, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 40>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 35>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=35, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 35>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 33>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=33, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 35>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 35>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=35, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 35>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 37>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=37, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 37>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 37>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=37, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 37>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 37>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=37, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 37>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 38>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=38, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 38>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 38>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=38, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 38>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 36>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=36, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 36>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 35>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=35, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 35>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 39>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=39, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 39>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 40>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=40, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 40>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 37>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=37, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 38>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+<Entering divide, nvtxs = 25, nedges = 39>
+<Entering coarsen_kl, step=0, nvtxs=25, nedges=39, vmax=50>
+<Entering eigensolve, nvtxs = 25, nedges = 39>
+<Entering lanczos_so>
+<Entering assign, nvtxs = 25, ndims = 1>
+<Entering klspiff, nvtxs = 25>
+
+
+                     Partitioning Results
+
+After level 1  (nsets = 4):
+
+                            Total      Max/Set      Min/Set
+                            -----      -------      -------
+Set Size:                     400          100          100
+Edge Cuts:                     62           32           28
+Hypercube Hops:                64           34           28
+Boundary Vertices:            104           29           24
+Boundary Vertex Hops:         107           30           25
+Adjacent Sets:                 10            3            2
+Internal Vertices:            300           78           72
+
+
+After level 2  (nsets = 16):
+
+                            Total      Max/Set      Min/Set
+                            -----      -------      -------
+Set Size:                     400           25           25
+Edge Cuts:                    166           30           10
+Hypercube Hops:               239           64           10
+Boundary Vertices:            290           26           10
+Boundary Vertex Hops:         417           54           10
+Adjacent Sets:                 70            7            2
+Internal Vertices:            162           16            5
+
+
+After level 3  (nsets = 32):
+
+                            Total      Max/Set      Min/Set
+                            -----      -------      -------
+Set Size:                     400           13           12
+Edge Cuts:                    229           22            8
+Hypercube Hops:               380           54            8
+Boundary Vertices:            412           20            7
+Boundary Vertex Hops:         689           48            7
+Adjacent Sets:                152            9            2
+Internal Vertices:             94            6            0
+
+
+Total time: 0.002999 sec.
+  partitioning 0.002999
+
+KL time: 0.000999 sec.
+  nway refinement 0.000999
+    bucket sorting 0.000999
+
+Lanczos time: 0.002 sec.
+
